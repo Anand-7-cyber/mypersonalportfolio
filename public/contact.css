@@ -1,0 +1,626 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+  font-family: "Open Sans", Arial, sans-serif;
+  background-color: black;
+}
+
+nav {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0); /* Transparent initially */
+  width: 100%;
+  height: 5rem;
+   /* Fix it to the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensure it stays above other content */
+  transition: background-color 0.9s ease; /* Smooth transition */
+}
+
+.navbut {
+  height: 2rem;
+  width: 4rem;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  margin-left: 1rem;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  cursor: pointer;
+  position: relative;
+}
+
+.navbut:hover {
+  color: #3498db;
+}
+
+.navbut.active {
+  color: #3498db;
+  font-weight: bold;
+}
+
+.navbut::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #3498db;
+  transition: width 0.3s ease;
+}
+
+.navbut:hover::after {
+  width: 100%;
+}
+
+.navbut.active::after {
+  width: 100%;
+}
+
+
+
+.navbut1, .navbut2 {
+  height: 2rem;
+  width: auto; /* Auto width for dynamic text */
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  margin-left: 1rem;
+  border: none;
+  background-color: rgba(0, 0, 0, 0); /* Transparent */
+  color: white;
+  cursor: pointer;
+  position: relative; /* For underline effect */
+  transition: color 0.3s ease; /* Smooth color change */
+}
+
+.navbut1:hover, .navbut2:hover {
+  color: #3498db; /* Hover color */
+}
+
+.navbut1::after, .navbut2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Position underline below text */
+  left: 50%; /* Start from center */
+  width: 0;
+  height: 2px;
+  background-color: #3498db; /* Underline color */
+  transition: all 0.3s ease; /* Smooth animation */
+  transform: translateX(-50%); /* Center align */
+}
+
+.navbut1:hover::after, .navbut2:hover::after {
+  width: 50%; /* Half underline on hover */
+}
+
+.navbut1.active, .navbut2.active {
+  color: #3498db; /* Active color same as hover */
+}
+
+.navbut1.active::after, .navbut2.active::after {
+  width: 50%; /* Permanent half underline */
+}
+/* Scroll effect */
+.scrolled nav {
+  background-color: rgba(0, 0, 0, 0.7); /* Light black with transparency */
+}
+
+/* ye hai nav ka personal wala text */
+
+.navh2{
+    margin-left: 17rem;
+    margin-top: 1.2rem;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* ye hai button nav ke  */
+
+.navbut1{
+    height: 2rem;
+    width: 4rem;
+    margin-left: 35rem;
+    margin-top: 1.5rem;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+   font-size: 1rem;
+     color: white;
+     cursor: pointer;
+}
+
+
+.navbut2{
+    height: 2rem;
+    width: 4rem;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    margin-left: 1rem;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+      color: white;
+      cursor: pointer;
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Dropdown button */
+  .dropbtn {
+    background-color: rgba(0, 0, 0, 0);
+   color: white;
+    height: 2rem;
+    width: 4.7rem;
+   margin-left: 1rem;
+    border: none;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  /* Dropdown content */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Change color on hover */
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+
+  /* Nested dropdown container */
+  .nested-dropdown {
+    position: relative;
+  }
+
+  /* Nested dropdown content */
+  .nested-dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%; /* Align to the right */
+    top: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Show dropdown on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* Show nested dropdown on hover */
+  .nested-dropdown:hover .nested-dropdown-content {
+    display: block;
+  }
+
+  /* Arrow style */
+  .arrow-right {
+    float: right;
+    margin-left: 10px;
+  }
+
+  /* nav ke baad wala div jisme information hjia thod sa */
+
+  #div1{
+    height: 18rem;
+    width: 1005;
+    background-color: black;
+    color: white;
+  }
+
+  .div1h2{
+
+height: 1rem;
+text-align: center;
+padding-top: 4.5rem;
+font-size: 3rem;
+margin-left: -3rem;
+
+  }
+
+  .div1p{
+margin-top: 4rem;
+line-height: 2rem;
+text-align: center;
+
+  }
+
+  /* ye hai dusra div */
+
+  #div2{
+    background-color: rgb(25, 25, 25);
+    height: 5rem;
+    width: 100%;
+    display: flex;
+  }
+
+  .div2but{
+
+margin-left: 10rem;
+font-size: 1rem;
+width: 3rem;
+height: 2rem;
+background-color: rgba(0, 0, 0, 0);
+border: none;
+color: rgb(24, 164, 73);
+margin-top: 2rem;
+cursor: pointer;
+  }
+
+  
+  .div2h6{
+    margin-left: 0.7rem;
+    color: white;
+    font-size: 1rem;
+    margin-top: 2.5rem;
+    
+      }
+    
+      .div2hr{
+        width: 1.8px;
+        height: 1.3rem;
+        transform: rotate(16deg);
+      margin-top: -1.7rem;
+        margin-left: 13.5rem;
+        border: none;
+        background-color: rgb(52, 152, 219);
+      }
+
+
+      .formdiv1{
+        width: 42rem;
+        height:33rem ;
+        background-color: black;
+       
+      justify-content: center;
+      margin-left: 15rem;
+      }
+      
+      .formdiv1h3{
+        font-family:"Open Sans", Arial, sans-serif;
+        color: plum;
+        font-size: 2rem;
+        margin-top: 3rem;
+        margin-left: 2rem;
+      }
+      
+      /* ye form me bahrne wla input hai  */
+      
+      #input1{
+        height: 3.4rem;
+        width: 16rem;
+       margin-top: 3rem;
+       margin-left: 2rem;
+       padding-left: 1rem;
+       font-size: large;
+       outline: none;
+       background-color: black;
+      color: white;
+      }
+      
+      #input2{
+        height: 3.4rem;
+        width: 16rem;
+        margin-left: 0.5rem;
+        padding-left: 1rem;
+        font-size: large;
+        
+        outline: none;
+         background-color: black;
+      color: white;
+      }
+      
+      #input3{
+        height: 3.4rem;
+        width: 16rem;
+       flex-direction: column;
+      margin-top: 1rem;
+        margin-left: 2rem;
+        padding-left: 1rem;
+        font-size: large;
+        outline: none;
+         background-color: black;
+      color: white;
+      }
+      
+      #input4{
+        height: 3.4rem;
+        width: 16rem;
+      margin-top: 1rem;
+      padding-left: 1rem;
+      font-size: large;
+        margin-left: 0.5rem;
+        outline: none;
+         background-color: black;
+      color: white;
+      }
+      
+      #input5{
+        height: 9rem;
+        width: 34rem;
+       margin-top: 1rem;
+        margin-left: 2rem;
+        color: rgb(146, 113, 246);
+        padding-left: 1rem;
+        font-size: larger;
+        outline: none;
+         background-color: black;
+      color: white;
+      }
+      
+      .input::placeholder{
+        padding-left: 1rem;
+      }
+      #formdiv1button{
+      
+        margin-left: 27rem;
+        margin-top: 1rem;
+        width: 9rem;
+        height: 3.5rem;
+        font-family:"Open Sans", Arial, sans-serif;
+        border: none;
+        border-radius: 75px;
+        color: white;
+        background: linear-gradient(to right, #d600f2, #e6e205);
+        cursor: pointer;
+      
+      }
+
+      /*  ab ye locations wala div */
+
+      /* Container General Styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+/* Info Item Styling */
+.info-item {
+  background:#1f1f1f ;
+  color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Styling */
+.info-item .icon {
+  font-size: 30px;
+  color: #007bff;
+  margin-right: 15px;
+}
+
+/* Headings and Text */
+.info-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+}
+
+.info-item p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: white;
+}
+
+/* Social Links Styling */
+.social-links a {
+  font-size: 18px;
+  color: white;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #007bff;
+}
+
+/* Contact Form Container */
+.php-email-form {
+  background: #f9f9f9;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  margin: 20px 0;
+}
+
+/* Input Fields */
+.php-email-form .form-control {
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 16px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.php-email-form .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+/* Textarea */
+.php-email-form textarea {
+  resize: none;
+  height: 150px;
+}
+
+/* Loading, Error, and Success Messages */
+.php-email-form .loading {
+  display: none;
+  color: #007bff;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.php-email-form .error-message {
+  display: none;
+  color: #dc3545;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.php-email-form .sent-message {
+  display: none;
+  color: #28a745;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Submit Button */
+.php-email-form button[type="submit"] {
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  border: none;
+  padding: 15px 30px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.php-email-form button[type="submit"]:hover {
+  background: linear-gradient(45deg, #0056b3, #003f7f);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .php-email-form {
+    padding: 20px;
+  }
+
+  .php-email-form .form-control {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .php-email-form button[type="submit"] {
+    font-size: 16px;
+    padding: 12px 25px;
+  }
+}
+
+/* Form Row Spacing */
+.php-email-form .row.gy-4 > div {
+  margin-bottom: 20px;
+}
+
+
+/* Footer Styles */
+#footer {
+  background-color:rgb(31, 31, 31);
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+  width: 100%;
+}
+.container1{
+  background-color: rgb(31, 31, 31);
+}
+
+.footer .sitename {
+  font-size: 24px;
+  margin-bottom: 20px;
+  
+}
+
+.footer p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.footer .social-links a {
+  color: #fff;
+  font-size: 20px;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.footer .social-links a:hover {
+  color: #f39c12;
+}
+
+.footer .copyright {
+  margin-top: 20px;
+}
+
+.footer .credits {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.footer .credits a {
+  color: #f39c12;
+}
+
+/* Scroll Top Button */
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f39c12;
+  color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.scroll-top:hover {
+  background-color: #e67e22;
+}
+
+/* Preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7) url('https://i.imgur.com/llF5iyg.gif') no-repeat center center;
+  background-size: 50px 50px;
+  z-index: 9999;
+  display: none;
+  background-color: #1f1f1f;
+}
