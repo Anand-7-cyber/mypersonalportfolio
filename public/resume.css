@@ -6,6 +6,8 @@
 
 body{
   font-family: "Open Sans", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 nav {
@@ -150,6 +152,8 @@ nav {
 .dropdown {
     position: relative;
     display: inline-block;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
   }
 
   /* Dropdown button */
@@ -169,7 +173,8 @@ nav {
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    color: #f9f9f9;
+    background-color: blue;
     min-width: 160px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
@@ -185,7 +190,8 @@ nav {
 
   /* Change color on hover */
   .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: pink;
+    color: white;
   }
 
   /* Nested dropdown container */
@@ -199,7 +205,8 @@ nav {
     position: absolute;
     left: 100%; /* Align to the right */
     top: 0;
-    background-color: #f9f9f9;
+    background-color: blue;
+    color: white;
     min-width: 160px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   }
@@ -296,51 +303,65 @@ body {
   background-color: #f4f4f4;
 }
 
-.container {
-  width: 80%;
-  margin: 0 auto;
-}
+/* resume sction yha se suru hai */
 
-/* Resume Section */
-#resume {
-  padding: 50px 0;
-  background-color: #fff;
-  color: white;
+.main{
   background-color: black;
 }
 
-.resume-title {
-  font-size: 24px;
-  font-weight: bold;
+.resume-container {
+  max-width: 800px;
+ margin: 20px, auto;
+ margin-left: 32rem;
+  background:black;
+  color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.header {
+  text-align: center;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 15px;
   margin-bottom: 20px;
 }
 
-.resume-item {
-  margin-bottom: 30px;
+.header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #007bff;
 }
 
-.resume-item h4 {
-  font-size: 20px;
-  font-weight: bold;
+.header p {
+  margin: 5px 0;
 }
 
-.resume-item h5 {
-  font-size: 18px;
-  color: #777;
+.header a {
+  color: #007bff;
+  text-decoration: none;
 }
 
-.resume-item ul {
-  list-style-type: none;
-  padding-left: 0;
+section {
+  margin-bottom: 20px;
 }
 
-.resume-item ul li {
+section h2 {
+  font-size: 1.5rem;
+  color: #007bff;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
   margin-bottom: 5px;
-}
-
-.resume-item p {
-  font-size: 16px;
-  color: #555;
+  line-height: 1.6;
 }
 
 /* Footer Styles */
@@ -414,4 +435,122 @@ body {
   background-size: 50px 50px;
   z-index: 9999;
   display: none;
+}
+
+
+/* Media Query for small devices (max-width: 600px) */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    height: auto; /* Adjust height */
+  }
+
+  .navh2 {
+    font-size: 1.5rem;
+    margin: 1rem 0; /* Adjust margins */
+  }
+
+  .navbut, .navbut1, .navbut2, .dropbtn {
+    width: 100%; /* Full-width buttons */
+    font-size: 1rem;
+    text-align: center;
+    margin: 0.5rem 0; /* Add spacing between buttons */
+  }
+
+  #div1 {
+    height: auto; /* Adjust height */
+    padding: 1rem; /* Add padding */
+    text-align: center;
+  }
+
+  .div1h2 {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  .div1p {
+    font-size: 1rem;
+  }
+
+  .resume-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .footer {
+    padding: 20px;
+  }
+}
+
+/* Media Query for medium devices (max-width: 768px) */
+@media (max-width: 768px) {
+  nav {
+    padding: 0 1rem;
+  }
+
+  .navh2 {
+    font-size: 2rem;
+  }
+
+  .navbut, .navbut1, .navbut2, .dropbtn {
+    font-size: 1rem;
+  }
+
+  #div1 {
+    padding: 2rem;
+  }
+
+  .div1h2 {
+    font-size: 2.5rem;
+  }
+
+  .div1p {
+    font-size: 1.2rem;
+  }
+
+  .resume-container {
+    margin: 2rem auto;
+    padding: 2rem;
+  }
+
+  .footer {
+    padding: 30px;
+  }
+}
+
+/* Media Query for large devices (max-width: 1024px) */
+@media (max-width: 1024px) {
+  nav {
+    padding: 0 2rem;
+  }
+
+  .navh2 {
+    font-size: 2.2rem;
+  }
+
+  .navbut, .navbut1, .navbut2, .dropbtn {
+    font-size: 1.1rem;
+  }
+
+  #div1 {
+    padding: 3rem;
+  }
+
+  .div1h2 {
+    font-size: 3rem;
+  }
+
+  .div1p {
+    font-size: 1.3rem;
+  }
+
+  .resume-container {
+    margin: 3rem auto;
+    padding: 3rem;
+  }
+
+  .footer {
+    padding: 40px;
+  }
 }

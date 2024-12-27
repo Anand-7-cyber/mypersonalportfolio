@@ -61,3 +61,8 @@ buttons.forEach(button => {
       this.classList.add('active'); // Add active to clicked button
   });
 });
+
+function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('active');
+}
