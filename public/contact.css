@@ -388,7 +388,7 @@ text-align: center;
   #div2{
     background-color: rgb(25, 25, 25);
     height: 5rem;
-    width: 100%;
+    width: auto;
     display: flex;
   }
 
@@ -528,11 +528,12 @@ cursor: pointer;
 
       /* Container General Styling */
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   background-color: black;
   color: white;
   padding: 20px;
+  width: auto;
 }
 
 /* Info Item Styling */
@@ -806,16 +807,6 @@ justify-content: center;
 
 
 
-  body {
-    font-family: "Open Sans", Arial, sans-serif;
-    width: auto;
-    height: auto;
-    max-width: 100%; /* Ensure width container se bahar na jaye */
-    overflow-x: hidden;
-   background-color: black;
-    background-size: cover; /* Or 100% 100% based on requirement */
-    background-size: 27rem 57rem;
-  }
 
   .navh2{
 
@@ -879,7 +870,7 @@ justify-content: center;
 
 
 .formdiv1{
-  width: auto;
+  width: 420px;
   height:auto ;
   background-color: black;
  
@@ -932,6 +923,18 @@ margin-top: 1rem;
   outline: none;
    background-color: black;
 color: white;
+}
+
+html, body {
+  
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  
+  overflow-x: hidden;
+  overflow-x: hidden;
+  width: auto; /* Small screens pe full width use ho */
+   
 }
 
 #input4{
