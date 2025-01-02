@@ -220,7 +220,73 @@ nav {
     float: right;
     margin-left: 10px;
   }
+/* Default navigation styles */
+.nav {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.9s ease;
+}
 
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+/* Hamburger menu hidden by default */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-left: 9rem;
+  width: auto;
+}
+
+/* Media query for small screens */
+@media (max-width: 420px) {
+
+  
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 5rem;
+    width: 100%;
+    left: 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .navbut1, .navbut2, .dropbtn {
+    margin: 1rem 0;
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem 1rem;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+  }
+
+  .nested-dropdown-content {
+    position: static;
+  }
+}
   /* nav ke baad wala div jisme information hjia thod sa */
 
   #div1{
@@ -552,7 +618,8 @@ cursor: pointer;
   color: #fff;
   padding: 40px 0;
   text-align: center;
-  width: 100%;
+  width: auto;
+  height: auto;
 }
 .container1{
   background-color: rgb(31, 31, 31);
@@ -623,4 +690,302 @@ cursor: pointer;
   z-index: 9999;
   display: none;
   background-color: #1f1f1f;
+}
+
+
+@media (max-width: 420px) {
+
+  .navh2{
+  
+    margin-top: 1.2rem;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    margin-left: 2rem;
+    width: auto;
+  }
+
+  
+  #div1{
+    height: auto;
+    width:auto;
+    background-color: black;
+    color: white;
+  }
+
+  .div1h2{
+
+height:auto;
+text-align: center;
+padding-top: 3rem;
+font-size: 3rem;
+
+margin-left: 0.1rem;
+  }
+
+  .div1p{
+margin-top: 2rem;
+
+line-height: 2rem;
+text-align: center;
+width: auto;
+height: auto;
+justify-content: center;
+
+  }
+
+
+
+  body {
+    font-family: "Open Sans", Arial, sans-serif;
+    width: auto;
+    height: auto;
+    max-width: 100%; /* Ensure width container se bahar na jaye */
+    overflow-x: hidden;
+   background-color: black;
+    background-size: cover; /* Or 100% 100% based on requirement */
+    background-size: 27rem 57rem;
+  }
+
+  .navh2{
+
+    margin-top: 1.2rem;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    margin-left: 2rem;
+    width: auto;
+  }
+
+
+  #main {
+    height: 40rem;
+    width: auto;
+    color: white;
+  }
+
+  .navh2 {
+    margin-top: 1.2rem;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+
+  .div1 {
+    height: 5rem;
+    width:auto;
+    font-weight: 700;
+    font-size: 3.8rem;
+    margin-top: 17rem;
+    margin-left: 3.5rem;
+  }
+
+  .div2 {
+    height: 2rem;
+    width:auto;
+    margin-left: 3.5rem;
+  }
+
+  .div3 {
+    height: 5rem;
+    width: auto;
+    display: flex;
+    margin-top: 1.5rem;
+    margin-left: 3.5rem;
+  }
+
+  
+.navh2{
+  
+  margin-top: 1.2rem;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  margin-left: 2rem;
+  width: auto;
+}
+
+
+
+
+.formdiv1{
+  width: auto;
+  height:auto ;
+  background-color: black;
+ 
+justify-content: center;
+margin-left: 0rem;
+}
+
+.formdiv1h3{
+  font-family:"Open Sans", Arial, sans-serif;
+  color: plum;
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-left: 2rem;
+}
+
+/* ye form me bahrne wla input hai  */
+
+#input1{
+  height: 3.4rem;
+  width: 9rem;
+ margin-top: 3rem;
+ margin-left: 1.4rem;
+ padding-left: 1rem;
+ font-size: large;
+ outline: none;
+ background-color: black;
+color: white;
+}
+
+#input2{
+  height: 3.4rem;
+  width: 9rem;
+  margin-left: 0.5rem;
+  padding-left: 1rem;
+  font-size: large;
+  
+  outline: none;
+   background-color: black;
+color: white;
+}
+
+#input3{
+  height: 3.4rem;
+  width: 9rem;
+ flex-direction: column;
+margin-top: 1rem;
+  margin-left: 1.4rem;
+  padding-left: 1rem;
+  font-size: large;
+  outline: none;
+   background-color: black;
+color: white;
+}
+
+#input4{
+  height: 3.4rem;
+  width: 9rem;
+margin-top: 1rem;
+padding-left: 1rem;
+font-size: large;
+  margin-left: 0.5rem;
+  outline: none;
+   background-color: black;
+color: white;
+}
+
+#input5{
+  height: 9rem;
+  width: 20rem;
+ margin-top: 1rem;
+  margin-left: 1.4rem;
+  color: rgb(146, 113, 246);
+  padding-left: 1rem;
+  font-size: larger;
+  outline: none;
+   background-color: black;
+color: white;
+}
+
+.input::placeholder{
+  padding-left: 1rem;
+}
+#formdiv1button{
+
+  margin-left: 13rem;
+  margin-top: 1rem;
+  width: 9rem;
+  height: 3.5rem;
+  font-family:"Open Sans", Arial, sans-serif;
+  border: none;
+  border-radius: 75px;
+  color: white;
+  background: linear-gradient(to right, #d600f2, #e6e205);
+  cursor: pointer;
+
+}
+
+/* Footer Styles */
+#footer {
+  background-color:rgb(31, 31, 31);
+  color: #fff;
+  margin-left: -1.3rem;
+  text-align: center;
+  margin-top: 2rem;
+  width: 26.3rem;
+  height: auto;
+}
+.container1{
+  background-color: rgb(31, 31, 31);
+}
+
+.footer .sitename {
+  font-size: 24px;
+  margin-bottom: 20px;
+  
+}
+
+.footer p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.footer .social-links a {
+  color: #fff;
+  font-size: 20px;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.footer .social-links a:hover {
+  color: #f39c12;
+}
+
+.footer .copyright {
+  margin-top: 20px;
+}
+
+.footer .credits {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.footer .credits a {
+  color: #f39c12;
+}
+
+/* Scroll Top Button */
+.scroll-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f39c12;
+  color: #fff;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.scroll-top:hover {
+  background-color: #e67e22;
+}
+
+/* Preloader */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7) url('https://i.imgur.com/llF5iyg.gif') no-repeat center center;
+  background-size: 50px 50px;
+  z-index: 9999;
+  display: none;
+  background-color: #1f1f1f;
+}
+
 }
